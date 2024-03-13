@@ -1,6 +1,9 @@
 import GroupContainer from "../components/GroupContainer";
 import TabContainer from "../components/TabContainer";
+import { useState } from "react";
 function MainPage() {
+  const [groups,setGrops]= useState<Number[]>()
+  const [currentTab,setCurrentTab]=useState<Number[]>()
   return (
    <div className="p-2">
         <GroupContainer 
