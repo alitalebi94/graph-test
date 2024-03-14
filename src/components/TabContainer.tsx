@@ -1,7 +1,7 @@
 import { Button } from 'react-bootstrap';
-function TabContainer({name,id}:any) {
+function TabContainer({setCurrentTab,tab}:any) {
     return (
-        <Button className='max-with-150' size="sm" onClick={()=>{console.log(id)}} variant="outline-primary">{name}</Button>
+        <Button className='max-with-150 m-1' size="sm" onClick={()=>{setCurrentTab(tab)}} variant="outline-primary">{tab.name}</Button>
     );
 }
   

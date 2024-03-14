@@ -1,14 +1,15 @@
 import { Button } from 'react-bootstrap';
-function GroupContainer({name,id}:any) {
+function GroupContainer({setCurrentGroup,group}:any) {
     return (
         <Button 
+            className='m-1'
             onContextMenu={(e) => {
                 e.preventDefault(); // prevent the default behaviour when right clicked
                 console.log("Right Click",e.pageX, e.pageY);
             }}
-            size="sm" onClick={()=>{console.log(id)}} variant="outline-primary"
+            size="sm" onClick={()=>{setCurrentGroup(group)}} variant="outline-primary"
         >
-            {name}
+            {group.title}
         </Button>
     );
 }

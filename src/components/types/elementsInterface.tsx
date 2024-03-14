@@ -1,10 +1,16 @@
-export interface tabs{
+export interface tab{
     name:string;
+    id:number;
     text: boolean;
 }
 
 export interface groups {
     title: string;
-    tabs:tabs
+    id:number;
+    tabs:tab[];
 } 
 
+export interface point{
+    x:number;
+    y:number;
+}
