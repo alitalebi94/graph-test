@@ -10,3 +10,17 @@
     overflow: hidden;
     padding-left: 2px;
 }
+
+.flex-direction-column{
+    flex-direction: column;
+}
+/* .contex-menu{
+    position: absolute;
+    top:0;
+    right:0;
+} */
+
+/* .closeIcon{
+    font-size: 10px;
+    font-weight: bold;
+} */
