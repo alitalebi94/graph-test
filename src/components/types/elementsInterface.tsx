@@ -2,13 +2,14 @@ export interface tab{
     name:string;
     id:number;
     pin:boolean;
-    text: boolean;
+    text: string;
 }
 
 export interface groups {
     title: string;
     pin:boolean;
     id:number;
+    color:string;
     tabs:tab[];
 } 
 

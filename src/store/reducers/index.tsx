@@ -5,16 +5,11 @@ import {persistReducer} from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import groupReducer from './groupReducer';
 
-const initialState = {
-  // sidebarShow: false//'responsive'
-  sidebarShow: false
-}
-
 // const changeState = (state = initialState, {type, ...rest}) => {
 
 
 const reducers = combineReducers({
-  account: persistReducer({
+  groups: persistReducer({
     key: 'groups', storage, keyPrefix: 'graph-'
   }, groupReducer),
 });

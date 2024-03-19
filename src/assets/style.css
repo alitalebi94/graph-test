@@ -14,13 +14,44 @@
 .flex-direction-column{
     flex-direction: column;
 }
-/* .contex-menu{
-    position: absolute;
-    top:0;
-    right:0;
-} */
+body{
+    background-color: whitesmoke;
+}
 
-/* .closeIcon{
-    font-size: 10px;
-    font-weight: bold;
-} */
+.justify-content-center{
+    justify-content: center;
+}
+
+.back-sky{
+    background-color: rgba(174, 202, 255, 0.277);
+    padding: 0px 2px !important;
+    font-size: small;
+    height: fit-content !important;
+}
+
+.group-list button{
+    font-weight: 700;
+}
+
+.tab-panel{
+    background-color: rgba(203, 226, 255, 0.277);
+    border: 1px solid blue;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.tab-panel button{
+    color: blue;
+}
+    
+.selected-tab{
+    background-color: rgb(243, 243, 243) !important;
+    border: 1px solid rgba(106, 106, 106, 0.275) !important;
+    border-radius: 4px 4px 0px 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: black !important;;
+}
+
+.min-height-fit-page{
+    min-height: 90vh;
+}

@@ -1,11 +1,34 @@
 import { Button } from 'react-bootstrap';
-import { tab } from './types/elementsInterface';
+import { groups, tab } from './types/elementsInterface';
+import { useDispatch } from "../store";
+import { UPDATE_TAB } from "../store/actions";
+import { useEffect, useState } from 'react';
 interface props {
-    tab:tab
+    tab:tab;
+    currentGroup:groups | undefined;
 }
-function TabContetnt({tab}:props) {
+function TabContetnt({tab, currentGroup}:props) {
+    const [tabToShow, setTabToShow] =useState<tab>();
+    const dispatch = useDispatch();
+    useEffect(()=>{
+        if(tabToShow != tab){
+            setTabToShow(tab);
+        }
+    })
+    const changeText = () => {
+        let element = document.getElementById('tab-content') as HTMLInputElement
+        dispatch({type: UPDATE_TAB, payload:{groupid:currentGroup?.id, tab: {...tab, text: element!.value}}});
+    };
     return (
-       <p>{tab.text}</p>
+        <div className='d-flex flex-direction-column justify-content-center'>
+            <label className='d-blick w-100 '>text:</label>
+            <input  className='' type="text" id="tab-content" name="rename" defaultValue={tabToShow?.text} />
+            <div className='text-center'>
+                <Button className='w-25 mt-3' size="sm" variant="btn btn-info" onClick={changeText}>change text</Button>
+            </div>
+            
+        </div>
+    //    <p>{tab.text}</p>
     );
 }
   
