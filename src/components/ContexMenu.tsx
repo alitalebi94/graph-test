@@ -59,9 +59,9 @@ function ContexMenu({type,point,selectedItem,currentGroup,setAddToGroupMenuShow}
     if(type=="group"){
         return (
             <div className='d-flex flex-direction-column' style={styles}>
-                <label className='d-blick w-100 m-1 p-0 text-start mx-2'>rename</label>
+                <label className='d-blick w-100 m-1 p-0 text-start mx-2 font-weight-700'>rename</label>
                 <input onClick={(e)=>e.stopPropagation()} className='m-1 p-0 text-start mx-2' type="text" id="rename" name="rename" />
-                <Button className=' mx-2 mb-1' size="sm" variant="btn btn-info" onClick={renameGroup}>rename group</Button>
+                <Button className=' mx-2 mb-1  font-weight-700' size="sm" variant="btn btn-info" onClick={renameGroup}>rename group</Button>
                 <hr className='m-0 p-0' />
                 <div className='m-1 p-0 text-start mx-2' >
                     <Button className='' size="sm" variant="btn btn-success" onClick={()=>colorGroup('green')}></Button> 
@@ -70,30 +70,29 @@ function ContexMenu({type,point,selectedItem,currentGroup,setAddToGroupMenuShow}
                     <Button className='mx-2' size="sm" variant="btn btn-warning" onClick={()=>colorGroup('yellow')}></Button>
                 </div>
                 <hr className='m-0 p-0' />
-                <Button className='m-1 p-0 text-start mx-2' size="sm" variant="btn btn-default" onClick={pinGroup}><img className='closeIcon me-3 ms-1 bold' src='icons/pin.png' width={'15px'}/>pin group</Button>
+                <Button className='m-1 p-0 text-start mx-2  font-weight-700' size="sm" variant="btn btn-default" onClick={pinGroup}><img className='closeIcon me-2 ms-1 bold' src='icons/pin.png' width={'15px'}/>pin group</Button>
                 <hr className='m-0 p-0' />
-                {/* <Button size="sm" variant="btn btn-default" onClick={colorGroup}><img className='closeIcon me-3 ms-1 bold' src='icons/icons8-close(1).svg' width={'15px'}/>group color</Button> */}
-                <Button onClick={emptyGroupTabs} className='m-1 p-0 text-start mx-2' size="sm" variant="btn"><img className='closeIcon me-2 bold' src='icons/icons8-close(1).svg' width={'15px'}/>close all group's tabs</Button>
+                <Button onClick={emptyGroupTabs} className='m-1 p-0 text-start mx-2  font-weight-700' size="sm" variant="btn"><img className='closeIcon me-2 bold' src='icons/icons8-close(1).svg' width={'15px'}/>close all group's tabs</Button>
             </div>
            
         );
     }else{
         return (
       
-            <div className='d-flex flex-direction-column' style={styles}>
-                <label className='d-blick w-100 m-1 p-0 text-start mx-2'>rename</label>
+            <div className='d-flex flex-direction-column font-weight-700' style={styles}>
+                <label className='d-blick w-100 m-1 p-0 text-start mx-2  font-weight-700'>rename</label>
                 <input onClick={(e)=>e.stopPropagation()} className='m-1 p-0 text-start mx-2' type="text" id="rename-tab" name="rename" />
-                <Button className=' mx-2 mb-1' size="sm" variant="btn btn-info" onClick={renameTab}>rename tab</Button>
+                <Button className=' mx-2 mb-1  font-weight-700' size="sm" variant="btn btn-info" onClick={renameTab}>rename tab</Button>
                 <hr className='m-0 p-0' />
-                <Button className='m-1 p-0 text-start mx-2' size="sm" variant="btn btn-default" onClick={pinTab}><img className='closeIcon me-3 ms-1 bold' src='icons/pin.png' width={'15px'}/>pin tab</Button>
+                <Button className='m-1 p-0 text-start mx-2  font-weight-700' size="sm" variant="btn btn-default" onClick={pinTab}><img className='closeIcon me-3 ms-1 bold' src='icons/pin.png' width={'15px'}/>pin tab</Button>
                 <hr className='m-0 p-0' />
-                <Button  className='m-1 p-0 text-start mx-2' size="sm" variant="btn " onClick={(e)=>{ e.stopPropagation();addToGroup()}}><img className='closeIcon me-3 ms-1 bold' src='icons/icons8-plus-50.svg' width={'15px'}/>add to group</Button>
+                <Button  className='m-1 p-0 text-start mx-2  font-weight-700' size="sm" variant="btn " onClick={(e)=>{ e.stopPropagation();addToGroup()}}><img className='closeIcon me-3 ms-1 bold' src='icons/icons8-plus-50.svg' width={'15px'}/>add to group    &gt;</Button>
                 <hr className='m-0 p-0' />
-                <Button className='m-1 p-0 text-start mx-2' size="sm" variant="btn " onClick={copytTab}><img className='closeIcon me-3 ms-1 bold' src='icons/folder.svg' width={'15px'}/>copy tab</Button>
+                <Button className='m-1 p-0 text-start mx-2 font-weight-700' size="sm" variant="btn " onClick={copytTab}><img className='closeIcon me-3 ms-1 bold' src='icons/folder.svg' width={'15px'}/>copy tab</Button>
                 <hr className='m-0 p-0' />
-                <Button className='m-1 p-0 text-start mx-2' size="sm" variant="btn " onClick={removeTab}><img className='closeIcon me-3 ms-1 bold' src='icons/icons8-close(1).svg' width={'15px'}/>close tab</Button>
+                <Button className='m-1 p-0 text-start mx-2 font-weight-700' size="sm" variant="btn " onClick={removeTab}><img className='closeIcon me-3 ms-1 bold' src='icons/icons8-close(1).svg' width={'15px'}/>close tab</Button>
                 <hr className='m-0 p-0' />
-                <Button className='m-1 p-0 text-start mx-2' size="sm" variant="btn " onClick={removeOtherTab}><img className='closeIcon me-3 ms-1 bold' src='icons/icons8-close(1).svg' width={'15px'}/>close other tabs</Button>
+                <Button className='m-1 p-0 text-start mx-2 font-weight-700' size="sm" variant="btn " onClick={removeOtherTab}><img className='closeIcon me-3 ms-1 bold' src='icons/icons8-close(1).svg' width={'15px'}/>close other tabs</Button>
             </div>
            
         );

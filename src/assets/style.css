@@ -33,6 +33,9 @@ body{
     font-weight: 700;
 }
 
+.font-weight-700{
+    font-weight: 700;
+}
 .tab-panel{
     background-color: rgba(203, 226, 255, 0.277);
     border: 1px solid blue;
@@ -54,4 +57,11 @@ body{
 
 .min-height-fit-page{
     min-height: 90vh;
+}
+
+.blue{
+    color:blue;
+}
+.black{
+    color:black;
 }

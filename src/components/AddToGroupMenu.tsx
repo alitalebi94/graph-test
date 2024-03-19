@@ -21,7 +21,7 @@ function AddToGroupMenu({groups,point,selectedItem,currentGroup}:props) {
     let styles = {
         position: "absolute",
         top:point.y,
-        left:point.x+250,
+        left:point.x+220,
         border: "1px solid blue",
         borderRadius: "3px",
        // width:"250px",

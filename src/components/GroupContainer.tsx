@@ -2,7 +2,7 @@ import { Button } from 'react-bootstrap';
 function GroupContainer({setCurrentGroup,group, setPoint, setSelectedItem, setContextMenuShow,setType}:any) {
     return (
         <Button 
-            className='m-1'
+            className='m-1 black'
             onContextMenu={(e) => {
                 e.preventDefault(); // prevent the default behaviour when right clicked
                 setPoint({x: e.pageX, y: e.pageY})
@@ -17,7 +17,7 @@ function GroupContainer({setCurrentGroup,group, setPoint, setSelectedItem, setCo
             id={group.id}
         >
             {group.pin? <img src='./icons/pin.png' width={'15px'}/>:''}
-            <img className='closeIcon mb-1 me-2 ms-1 bold' src='icons/folder.svg' width={'13px'}/>
+            <img className='closeIcon mb-1 me-2 ms-1 bold blue' src='icons/folder.svg' width={'13px'}/>
             {' '+group.title+' '}
             <span className='back-sky ms-1'>{group.tabs.length}</span>
         </Button>
