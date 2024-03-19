@@ -2,10 +2,10 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MainPage from './pages/Main';
 import Header from './components/Header';
-import './assets/style.css';
+import './assets/style.less';
 import { useDispatch } from './store';
 import { useEffect } from 'react';
-import { INSERT_GROUP, EMPTY_GROUP } from './store/actions';
+import { INSERT_GROUP } from './store/actions';
 function App() {
   const dispatch = useDispatch();
    useEffect(()=>{ 
