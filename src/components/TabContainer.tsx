@@ -1,5 +1,4 @@
 import { Button } from 'react-bootstrap';
-import TabButton from './common/TabButton';
 function TabContainer({setCurrentTab,tab, setPoint, setSelectedItem, setContextMenuShow,setType, pin}:any) {
     return (
         // <TabButton />

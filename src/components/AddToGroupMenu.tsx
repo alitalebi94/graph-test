@@ -42,14 +42,6 @@ function AddToGroupMenu({groups,point,selectedItem,currentGroup}:props) {
                 )
             })}
         </div>
-      
-
-        // <div className='' style={styles}>
-        //     <Button size="sm" variant="btn btn-link" onClick={copytTab}><img className='closeIcon me-3 ms-1 bold' src='icons/icons8-close(1).svg' width={'15px'}/>copy tab</Button>
-        //     <Button size="sm" variant="btn btn-link" onClick={removeTab}><img className='closeIcon me-3 ms-1 bold' src='icons/icons8-close(1).svg' width={'15px'}/>close tab</Button>
-        //     <Button size="sm" variant="btn btn-link" onClick={removeOtherTab}><img className='closeIcon me-3 ms-1 bold' src='icons/icons8-close(1).svg' width={'15px'}/>close other tabs</Button>
-        // </div>
-        
     );
     
    

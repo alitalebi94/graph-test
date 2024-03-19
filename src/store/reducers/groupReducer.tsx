@@ -18,16 +18,6 @@ const groupReducer = (state = initialState, action:any) => {
         }
         case UPDATE_GROUP: {
             let groups:groups[] = state.groups;
-            console.log('aaa',action.payload.group)
-            console.log('aaa222',state.groups)
-            // state.groups.forEach((element:groups,index:number) => {
-            //     if(action.payload.group.id == element.id){
-            //         groups[index] =  action.payload.group;
-            //     }
-            // });
-            // return Object.assign({}, state, {
-            //     groups: groups,
-            // })
             groups = state.groups.map((group:groups)=>{
                 if(action.payload.group.id == group.id){
                     return action.payload.group;
@@ -72,14 +62,10 @@ const groupReducer = (state = initialState, action:any) => {
                 }
                 return group
             })
-            console.log('aaa222333',groups)
             return {...state, groups: groups}
         }
         case DELETE_OTHER_TAB: {
             let groups:groups[] = state.groups;
-            console.log('aaa',action.payload.groupid)
-            console.log('aaa',action.payload.tabid)
-            console.log('aaa222',state.groups)
             groups = state.groups.map((group:groups)=>{
                 if(action.payload.groupid == group.id){
                     return {...group,tabs:group.tabs.filter((tab)=>action.payload.tabid == tab.id)};
@@ -87,7 +73,6 @@ const groupReducer = (state = initialState, action:any) => {
                 }
                 return group
             })
-            console.log('aaa222333',groups)
             return {...state, groups: groups}
         }
         case UPDATE_TAB: {
@@ -117,7 +102,6 @@ const groupReducer = (state = initialState, action:any) => {
                 }
                 return group
             })
-            console.log('aaa222333',groups)
             return {...state, groups: groups}
         }
         default: {

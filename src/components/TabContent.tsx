@@ -31,7 +31,6 @@ function TabContetnt({tab, currentGroup}:props) {
             </div>
             
         </div>
-    //    <p>{tab.text}</p>
     );
 }
   

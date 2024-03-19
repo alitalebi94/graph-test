@@ -10,13 +10,11 @@ function AddTab({currentGroup,updateCurrentGroup}:props) {
     const dispatch = useDispatch();
     const addTab = () =>{
         let groupid = 0
-        console.log('ali',currentGroup);
         if(currentGroup){
             groupid = currentGroup.id
         }
         let newTab:tab = {name:'new-tab', pin:false, id:2, text:''}
         dispatch({type: INSERT_TAB,payload:{groupid:groupid,newTab:newTab}});
-        //setTimeout(()=>updateCurrentGroup(),5000)
         updateCurrentGroup();
       }
     return (
