@@ -20,9 +20,7 @@ function TabContetnt({tab, currentGroup}:props) {
     const changeText = () => {
         let element = document.getElementById('tab-content') as HTMLInputElement
         let value = element.value;
-        
         dispatch({type: UPDATE_TAB, payload:{groupid:currentGroup?.id, tab: {...tab, text: value}}});
-        //setTabToShow({...tab, text: element!.value});
     };
     return (
         <div className='d-flex flex-direction-column justify-content-center'>
